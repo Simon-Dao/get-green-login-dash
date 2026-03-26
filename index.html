@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swagger-ui-dist/swagger-ui.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <button id="back-to-login">Back to Login</button>
+
+    <!-- Container to store Login screen -->
+    <div id="login-ui">
+      <!-- Login Form -->
+       <h1>Warning: this dashboard is makes API calls in the production environment!</h1>
+      <form id="login-form" action="" method="post">
+        <div class="container">
+          <label for="username"><b>Username or Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username or Email"
+            name="username"
+            required
+          />
+
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          />
+
+          <button class="button" type="submit">Login</button>
+        </div>
+      </form>
+
+      <!-- Displays errors with logins -->
+      <h1 id="error"></h1>
+    </div>
+
+    <!-- Displays the swagger dashboard -->
+    <div id="swagger-ui"></div>
+    <script src="config.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
